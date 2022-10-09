@@ -169,6 +169,9 @@ create_config! {
     condense_wildcard_suffixes: bool, false, false, "Replace strings of _ wildcards by a single .. \
                                                      in tuple patterns";
 
+
+    color: String, "auto", true, "Use colored output (if supported)"
+
     // Control options (changes the operation of rustfmt, rather than the formatting)
     // [..] deleted
 

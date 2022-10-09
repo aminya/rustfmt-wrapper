@@ -74,6 +74,10 @@ pub fn rustfmt_config<T: ToString>(mut config: config::Config, input: T) -> Resu
         args.push("--unstable-features".to_string())
     }
 
+    if let Some(color) = &config.color {
+        args.push(format!("--color={}", color));
+    }
+
     let mut command = Command::new(&rustfmt)
         .args(args)
         .stdin(Stdio::piped())
